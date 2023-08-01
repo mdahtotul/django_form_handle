@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1 class="text-center text-decoration-underline">Playground page</h1>
+
+<div class="mt-2">
+  {% if user_email %}
+  <h5>Email: <span class="text-success" >{{user_email}}</span></h5>
+  {% endif %}
+  
+  {% if user_pass %}
+  <h5>Password: <span class="text-danger text-decoration-line-through" >{{user_pass}}</span></h5>
+  {% endif %}
+  
+  {% if car_brand %}
+  <h5>Car: <span class="text-secondary" >{{car_brand}}</span></h5>
+  {% endif %}
+</div>
+
+{% endblock %}

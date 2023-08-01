@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1 class="text-center">Form Page</h1>
+
+<form method="post" action="/playground/">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" name="user_email" id="email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" name="user_pass">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="check1">
+    <label class="form-check-label" for="check1">Remember Me</label>
+  </div>
+  <div class="mb-3">
+    <select class="form-select" aria-label="Default select example" name="car_brand">
+      <option selected>--Select--</option>
+      <option value="Audi">Audi</option>
+      <option value="Volvo">Volvo</option>
+      <option value="Mercedes">Mercedes</option>
+    </select>
+  </div> 
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+<div class="mt-2">
+  {% if user_email %}
+  <h5>Email: <span class="text-success text-decoration-underline" >{{user_email}}</span></h5>
+  {% endif %}
+  
+  {% if user_pass %}
+  <h5>Password: <span class="text-success" >{{user_pass}}</span></h5>
+  {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/fonts/FiraCode-Web/FiraCodeNerdFont-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/static/fonts/FiraCode-Web/FiraCodeNerdFont-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/static/fonts/FiraCode-Web/FiraCodeNerdFont-Bold.ttf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Code';
+}
